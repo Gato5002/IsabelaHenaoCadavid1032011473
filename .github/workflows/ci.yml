@@ -1,0 +1,13 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  run-python:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Run calculator
+      run: python3 test_calculadora.py
